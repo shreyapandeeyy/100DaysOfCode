@@ -1,8 +1,12 @@
 class Solution {
-    public double[] convertTemperature(double celsius) {
-    double k = celsius + 273.15;
-    double f = (celsius * 1.80) +32.00;
-    double [] arr = {k,f};
-    return arr;
+   public int titleToNumber(String s) {
+        if (s == null) return -1;
+        int sum = 0;
+        for (char c : s.toUpperCase().toCharArray()) {
+            sum *= 26;
+            sum += c - 'A' + 1;
+        }
+        return sum;
+        
     }
 }
